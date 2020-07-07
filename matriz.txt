@@ -1,0 +1,59 @@
+public class CambioMatriz {
+
+public static void main(String[] args) {
+
+    int[][] matriz={{1,2,3,4,5,6,8},{2,1,3,4,5,6,7,9,9,10},{2,3,1,4,5,6,7,8,9,10},
+            {2,3,4,1,5,6,7,8,9,10},{2,3,1,5,1,6,7,8,9,10}};
+    System.out.println("Tu matriz es:");
+    ver(matriz);
+
+    System.out.println("\nAhora la cuarta fila y la primera");
+    verPrimeraCuarta(matriz);
+
+
+}
+
+public static void ver(int[][]matriz) {
+    int i,j;
+    for (i = 0; i < matriz.length;i ++) {
+        for (j = 0; j < matriz[i].length; j++) {
+            System.out.print(matriz[i][j]);
+
+        }
+        System.out.print("\n");
+    }
+}
+
+public static void verPrimeraCuarta(int[][]matriz) {
+    int i,j = 0,k,l = 0,aux,cuarta = 0, primera = 0,m,n;
+
+    System.out.println("La primera fila de tu matriz es:");
+    for (i = 0; i < matriz.length && i<1;i ++) {
+        for (j = 0; j < matriz[i].length; j++) {
+System.out.print(matriz[i][j]);
+            primera = matriz[i][j];
+        }
+        System.out.print("\n");
+    }
+    System.out.println("La cuarta fila de tu matriz es:");
+
+    for (k = 3; k < matriz.length && k<10;k ++) {
+        for (l = 0; l < matriz[k].length; l++) {
+            System.out.print(matriz[k][l]);
+            cuarta = matriz[k][l];
+
+        }
+        System.out.print("\n");
+    }
+
+    System.out.println("\nLos valores intercambiados son:");
+        aux=primera;
+        primera = cuarta;
+        cuarta=aux;
+
+    System.out.println("El valor de la primera fila ahora es:"+primera);
+    System.out.println("El valor de la cuarta fila ahora es:"+cuarta);
+
+
+}
+}
